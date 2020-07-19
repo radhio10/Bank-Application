@@ -1,5 +1,7 @@
 package dev.radhio;
-
+/**
+ * Created by Azmia Hoque Radhio on 7/17/2020.
+ */
 public abstract class Account implements IBaseRate {
     // List Common Properties for Saving and Checking Accounts
     private String name, sSN;
@@ -9,10 +11,10 @@ public abstract class Account implements IBaseRate {
     private static int index = 1000;
 
     // Constructor to Set Base Properties and initialize tha Account
-    public Account(String name, String sSN, double initialDiposite) {
+    public Account(String name, String sSN, double initialDiposit) {
         this.name = name;
         this.sSN = sSN;
-        balance = initialDiposite;
+        balance = initialDiposit;
         //Set Account Number
         this.accountNumber = setAccountNumber();
         setRate();
@@ -35,9 +37,9 @@ public abstract class Account implements IBaseRate {
     }
 
     // List Common Methods
-    public void deposite(double amount) {
+    public void deposit(double amount) {
         balance = balance + amount;
-        System.out.println("Deposting:"+amount);
+        System.out.println("Depositing:"+amount);
     }
 
     public void withdraw(double amount) {
@@ -47,7 +49,7 @@ public abstract class Account implements IBaseRate {
 
     public void transfer(String toWhom,double amount) {
         balance = balance - amount;
-        System.out.println("Transfering:"+amount+" To "+toWhom);
+        System.out.println("Transferring:"+amount+" To "+toWhom);
     }
 
     public void printNewBalance() {

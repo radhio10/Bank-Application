@@ -1,12 +1,14 @@
 package dev.radhio;
-
+/**
+ * Created by Azmia Hoque Radhio on 7/17/2020.
+ */
 public class Checking extends Account {
     // List Properties Special to a Checking Account
     private int debitCardNumber,debitCardPIN;
 
     // Constructor to Initialize Checking Account Properties
-    public Checking(String name,String sSN, double initialDiposite){
-        super(name,sSN,initialDiposite);
+    public Checking(String name,String sSN, double initialDiposit){
+        super(name,sSN,initialDiposit);
         accountNumber = "2"+accountNumber;
         setDebitCard();
     }
